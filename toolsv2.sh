@@ -41,7 +41,6 @@ sudo apt-fast install -y apt-transport-https
 sudo apt-fast install -y libcurl4-openssl-dev
 sudo apt-fast install -y libssl-dev
 sudo apt-fast install -y jq
-sudo apt-fast install -y ruby-full
 sudo apt-fast install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt-fast install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-fast install -y python-setuptools
@@ -49,11 +48,8 @@ sudo apt-fast install -y libldns-dev
 sudo apt-fast install -y python3-pip
 sudo apt-fast install -y python-dnspython
 sudo apt-fast install -y git
-sudo apt-fast install -y npm
 sudo apt-fast install -y nmap phantomjs 
 sudo apt-fast install -y gem
-sudo apt-fast install -y perl 
-sudo apt-fast install -y parallel
 pip3 install jsbeautifier
 echo ""
 echo ""
@@ -163,7 +159,7 @@ sar 1 1 >/dev/null
 echo "${GREEN}#### ProjectDiscovery Pinned Tools ####${RESET}"
 
 echo "${BLUE} installing naabu${RESET}"
-go get -u github.com/projectdiscovery/naabu/cmd/naabu
+GO111MODULE=on go get -u -v github.com/projectdiscovery/naabu/v2/cmd/naabu
 echo "${BLUE} done${RESET}"
 echo ""
 
@@ -173,7 +169,7 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing subfinder${RESET}"
-go get -u github.com/projectdiscovery/subfinder/cmd/subfinder
+GO111MODULE=on go get -u -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 echo "${BLUE} done${RESET}"
 echo ""
 
@@ -200,6 +196,8 @@ git clone https://github.com/s0md3v/Arjun.git ~/tools/Arjun
 echo "${BLUE} done${RESET}"
 echo ""
 sar 1 1 >/dev/null
+
+git clone https://github.com/1ndianl33t/Gf-Patterns.git
 
 echo "${GREEN} use the command 'source ~/.bash_profile' for the shell functions to work ${RESET}"
 echo ""
