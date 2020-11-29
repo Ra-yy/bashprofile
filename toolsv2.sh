@@ -196,9 +196,14 @@ echo "${BLUE} done${RESET}"
 echo ""
 sar 1 1 >/dev/null
 
+echo "${GREEN} #### Installing ffuf alias #### ${RESET}"
 git clone https://github.com/1ndianl33t/Gf-Patterns.git
 alias ffufe='ffuf -w ~/../../content/drive/MyDrive/Wordlists/dicc.txt -D -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sql,json,php~ -u '
-go get -u github.com/sensepost/gowitness
+alias ffufdir='ffuf -w ~/../../content/drive/MyDrive/Wordlists/raft-large-directories.txt -u '
+alias ffufnm='ffuf -w ~/../../content/drive/MyDrive/Wordlists/raft-large-files.txt -u '
+echo "${BLUE} done${RESET}"
+echo ""
+sar 1 1 >/dev/null
 
 echo "${GREEN} use the command 'source ~/.bash_profile' for the shell functions to work ${RESET}"
 echo ""
