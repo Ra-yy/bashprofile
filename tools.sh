@@ -5,9 +5,6 @@ GREEN=$(tput setaf 2)
 BLUE=$(tput setaf 4)
 RESET=$(tput sgr0)
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-
 sudo add-apt-repository -y ppa:apt-fast/stable < /dev/null
 sudo echo debconf apt-fast/maxdownloads string 16 | debconf-set-selections
 sudo echo debconf apt-fast/dlflag boolean true | debconf-set-selections
