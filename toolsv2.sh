@@ -197,6 +197,7 @@ echo ""
 sar 1 1 >/dev/null
 
 git clone https://github.com/1ndianl33t/Gf-Patterns.git
+alias ffufe='ffuf -w ~/../../content/drive/MyDrive/Wordlists/dicc.txt -D -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sql,json,php~ -u '
 
 echo "${GREEN} use the command 'source ~/.bash_profile' for the shell functions to work ${RESET}"
 echo ""
