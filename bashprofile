@@ -1,9 +1,11 @@
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash
-#### XSS ####
-alias xsstrike="python3 ~/tools/XSStrike/xsstrike.py"
+
 #### Other Tools ####
+
 alias paramspider="python3 ~/tools/ParamSpider/paramspider.py"
+
 alias arjun="python3 ~/tools/Arjun/arjun.py"
+
+source $GOPATH/src/github.com/tomnomnom/gf/gf-completion.bash
