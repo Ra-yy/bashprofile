@@ -29,7 +29,6 @@ echo "${GREEN} [+] Updating and installing dependencies ${RESET}"
 echo ""
 
 sudo apt-get -y update
-sudo apt-get -y upgrade
 
 sudo add-apt-repository -y ppa:apt-fast/stable < /dev/null
 sudo echo debconf apt-fast/maxdownloads string 16 | debconf-set-selections
