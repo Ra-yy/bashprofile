@@ -1,19 +1,24 @@
 #!/bin/bash
+
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 BLUE=$(tput setaf 4)
 RESET=$(tput sgr0)
+
 sudo apt-get -y update
 sudo apt-get -y upgrade
+
 sudo add-apt-repository -y ppa:apt-fast/stable < /dev/null
 sudo echo debconf apt-fast/maxdownloads string 16 | debconf-set-selections
 sudo echo debconf apt-fast/dlflag boolean true | debconf-set-selections
 sudo echo debconf apt-fast/aptmanager string apt-get | debconf-set-selections
 sudo apt install -y apt-fast
+
 sudo apt-fast install -y apt-transport-https
 sudo apt-fast install -y libcurl4-openssl-dev
 sudo apt-fast install -y libssl-dev
 sudo apt-fast install -y jq
+sudo apt-fast install -y ruby-full
 sudo apt-fast install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt-fast install -y build-essential libssl-dev libffi-dev python-dev
 sudo apt-fast install -y python-setuptools
@@ -21,7 +26,11 @@ sudo apt-fast install -y libldns-dev
 sudo apt-fast install -y python3-pip
 sudo apt-fast install -y python-dnspython
 sudo apt-fast install -y git
-sudo apt-fast install -y nmap phantomjs
+sudo apt-fast install -y npm
+sudo apt-fast install -y nmap phantomjs 
+sudo apt-fast install -y gem
+sudo apt-fast install -y perl 
+sudo apt-fast install -y parallel
 pip3 install jsbeautifier
 echo ""
 echo ""
@@ -30,6 +39,8 @@ sar 1 1 >/dev/null
 #Setting shell functions/aliases
 echo "${GREEN} [+] Setting bash_profile aliases ${RESET}"
 curl https://raw.githubusercontent.com/Ra-yy/vps-setup/main/bashprofile > ~/.bash_profile
+echo "${BLUE} If it doesn't work, set it manually ${RESET}"
+echo ""
 echo ""
 sar 1 1 >/dev/null
 
@@ -160,5 +171,4 @@ cd ~/tools/ParamSpider
 sudo pip3 install -r requirements.txt
 echo "${BLUE} done${RESET}"
 echo ""
-
-sar 1 1 >/dev/null
+echo "done"
