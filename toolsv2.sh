@@ -163,7 +163,7 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing nuclei${RESET}"
-go get -u github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 echo "${BLUE} done${RESET}"
 echo ""
 
